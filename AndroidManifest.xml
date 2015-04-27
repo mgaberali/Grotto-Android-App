@@ -16,13 +16,19 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
-            
         </activity>
         <activity
             android:name=".Neighbors"
-            android:label="@string/title_activity_neighbors" >
+            android:label="@string/title_activity_neighbors"
+            android:theme="@style/listActivityStyle" >
+           
+        </activity>
+        <activity
+            android:name=".NeighborsRequests"
+            android:label="@string/title_activity_neighbors_requests" 
+            android:theme="@style/listActivityStyle">
             
-            <intent-filter>
+             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

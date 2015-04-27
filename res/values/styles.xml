@@ -17,4 +17,14 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <style name="listActivityStyle" parent="AppBaseTheme">
+        <item name="android:actionBarStyle">@style/ActionBarRedStyle</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="ActionBarRedStyle"
+           parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#e15868</item> <!-- e15868 --> <!-- #f4ad49 -->
+    </style>
+    
 </resources>

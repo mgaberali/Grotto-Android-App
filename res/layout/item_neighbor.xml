@@ -1,61 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:weightSum="10" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <TextView
-            android:id="@+id/txtf_neighbor_name"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="Name"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:layout_weight="9.5"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/btn_add_to_emergency_list"
-            style="?android:attr/buttonStyleSmall"
+            <TextView
+                android:id="@+id/txtv_neighbor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#563743" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:id="@+id/txtv_neighbor_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cairo"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#a8979a" />
+
+                <TextView
+                    android:id="@+id/txtv_neighbor_far"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="1 Km far"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#a8979a" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="160dp"
-            android:layout_marginTop="15dp"
-            android:text="add" />
+            android:layout_weight="0.5" >
 
-        <Button
-            android:id="@+id/btn_del_neighbor"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="del" />
+            <Button
+                android:id="@+id/btn_neighbor_add_to_emerg_list"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/btn_list_add_to_emergent" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/btn_neighbor_del"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/btn_list_del" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <TextView
-            android:id="@+id/txtf_neighbor_city"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:text="City"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-             />
-
-        <TextView
-            android:id="@+id/txtf_neighbor_far"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:text="2K far"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

@@ -2,9 +2,13 @@ package com.java.grotto;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import com.java.grotto.pojo.Neighbor;
+
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -22,6 +26,13 @@ public class Neighbors extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_neighbors);
+		
+		// get action bar   
+        ActionBar actionBar = getActionBar();
+        
+        // hide action bar icon
+        getActionBar().setIcon(
+        		   new ColorDrawable(getResources().getColor(android.R.color.transparent)));    
 		
 		// link list_neighbors with UI component
 		neighborsList = (ListView) findViewById(R.id.list_neighbors);
