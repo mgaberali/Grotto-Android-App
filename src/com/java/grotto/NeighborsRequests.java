@@ -49,8 +49,6 @@ private ListView neighborsRequestsList;
 		// set list of neighbors requests data
 		setNeighborsListData(this, neighbors);
 		
-		// set neighbors requests list by neighbors requests data
-		setNeighborsListData(this, neighbors);
 		
 	}
 	

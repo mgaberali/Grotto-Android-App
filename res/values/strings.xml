@@ -7,5 +7,9 @@
     <string name="title_activity_neighbors">Neighbors</string>
     <string name="title_activity_neighbors_request">Neighbors Requests</string>
     <string name="title_activity_neighbors_requests">Neighbors Requests</string>
+    <string name="title_activity_neighbors_near_you">Neighbors Near You</string>
+    <string name="search">Search</string>
+    <string name="title_activity_emergency_list">Emergency List</string>
+    <string name="title_activity_super_markets">Super Markets</string>
 
 </resources>

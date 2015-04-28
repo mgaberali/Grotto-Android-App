@@ -21,18 +21,34 @@
             android:name=".Neighbors"
             android:label="@string/title_activity_neighbors"
             android:theme="@style/listActivityStyle" >
-           
-        </activity>
-        <activity
-            android:name=".NeighborsRequests"
-            android:label="@string/title_activity_neighbors_requests" 
-            android:theme="@style/listActivityStyle">
             
-             <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            
+        </activity>
+        <activity
+            android:name=".NeighborsRequests"
+            android:label="@string/title_activity_neighbors_requests"
+            android:theme="@style/listActivityStyle" >
+        </activity>
+        <activity
+            android:name=".NeighborsNearYou"
+            android:label="@string/title_activity_neighbors_near_you"
+            android:theme="@style/listActivityStyle" >
+        </activity>
+        <activity
+            android:name=".EmergencyList"
+            android:label="@string/title_activity_emergency_list"
+            android:theme="@style/listActivityStyle" >
+            
+        </activity>
+        <activity
+            android:name=".SuperMarkets"
+            android:label="@string/title_activity_super_markets"
+            android:theme="@style/listActivityStyle" >
             
         </activity>
     </application>

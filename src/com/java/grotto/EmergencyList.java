@@ -2,13 +2,10 @@ package com.java.grotto;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import com.java.grotto.pojo.Neighbor;
-
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,14 +16,14 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class Neighbors extends Activity {
+public class EmergencyList extends Activity {
 
-	private ListView neighborsList;
+	private ListView emergencyList;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_neighbors);
+		setContentView(R.layout.activity_emergency_list);
 		
 		// get action bar   
         ActionBar actionBar = getActionBar();
@@ -35,10 +32,10 @@ public class Neighbors extends Activity {
         getActionBar().setIcon(
         		   new ColorDrawable(getResources().getColor(android.R.color.transparent)));    
 		
-		// link list_neighbors with UI component
-		neighborsList = (ListView) findViewById(R.id.list_neighbors);
+		// link list_emergency with UI component
+		emergencyList = (ListView) findViewById(R.id.list_emergency);
 		
-		// create neighbors array list
+		// create emergency array list
 		List<Neighbor> neighbors = new ArrayList<Neighbor>();
 		
 		// test data
@@ -48,24 +45,23 @@ public class Neighbors extends Activity {
 		neighbors.add(new Neighbor());
 		
 		
-		// set list of neighbors data
-		setNeighborsListData(this, neighbors);
-		
+		// set list of emergency data
+		setEmergencyListData(this, neighbors);
 		
 	}
 	
 	/**
-	 * create custom adapter by list of neighbors and set this adapter to neighbors list view
+	 * create custom adapter by list of emergency and set this adapter to neighbors list view
 	 * @param context
-	 * @param list of neighbors
+	 * @param list of emergency contacts
 	 */
-	private void setNeighborsListData(Context context, List<Neighbor> neighbors){
+	private void setEmergencyListData(Context context, List<Neighbor> emergencyContacts){
 		
 		// create custom adapter
-		NeighborsCustomAdapter adapter = new NeighborsCustomAdapter(context, R.layout.item_neighbor, neighbors);
+		NeighborsCustomAdapter adapter = new NeighborsCustomAdapter(context, R.layout.item_emergency, emergencyContacts);
 		
 		// set list adapter
-		neighborsList.setAdapter(adapter);
+		emergencyList.setAdapter(adapter);
 		
 	}
 	
@@ -89,7 +85,7 @@ public class Neighbors extends Activity {
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			
 			// get item_neighbor layout
-			View neighborItem = inflator.inflate(R.layout.item_neighbor, parent, false);
+			View neighborItem = inflator.inflate(R.layout.item_emergency, parent, false);
 			
 			return neighborItem;
 		}
@@ -101,7 +97,7 @@ public class Neighbors extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.neighbors, menu);
+		getMenuInflater().inflate(R.menu.emergency_list, menu);
 		return true;
 	}
 
@@ -111,26 +107,9 @@ public class Neighbors extends Activity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		
-		switch (id) {
-		case R.id.btn_actBar_add:
-			
-			goToNeighborsNearYouActivity();
-			
-			break;
-
-		default:
-			break;
+		if (id == R.id.action_settings) {
+			return true;
 		}
-		
 		return super.onOptionsItemSelected(item);
 	}
-	
-	private void goToNeighborsNearYouActivity(){
-		
-		Intent intent = new Intent(this, NeighborsNearYou.class);
-		startActivity(intent);
-		
-	}
-	
 }

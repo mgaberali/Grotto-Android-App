@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.java.grotto.SuperMarkets" >
+
+    <!-- Add -->
+    <item android:id="@+id/btn_actBar_add"
+          android:icon="@drawable/btn_action_bar_add"
+          android:title=""
+          android:showAsAction="always"/>
+
+</menu>
